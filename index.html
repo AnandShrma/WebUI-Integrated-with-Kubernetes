@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>testing</title>
+	<link rel="stylesheet" href="testing.css">
+	<script src="test.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script>
+window.onload=function(){
+
+	navigator.mediaDevices.getUserMedia({ audio: true })
+      .then(function(stream) {
+        console.log('You let me use your mic!')
+      })
+      .catch(function(err) {
+        console.log('No mic for you!')
+      });
+	
+}
+
+      
+</script>
+
+</head>
+<body>
+
+<div class="imgdiv">
+  <img class="kubeimg" src="kube.png">
+</div>
+
+
+<div id="input-box1">
+  <div><h1 class="head1">Kubernetes User</h1></div>
+  <form>
+    <input class="txt" type="text1" id="txtBox1"  placeholder="Enter Your Requirement..." autofocus><input class="rm">
+  </form>
+  <div>
+      <input id="run1" onclick="kubelist()" type="submit" name="" value="Run">
+  </div>
+</div>
+
+<div class="box1">
+  <pre>
+    <h3><u>Output:-</u></h3>
+    <div id="injected1"></div>
+  </pre>	
+</div>
+
+
+
+<div id="input-box2">
+  <div><h1 class="head2">Kubernetes Expert</h1></div>
+  <form>
+    <input class="txt" type="text2" id="txtBox2"  placeholder="Enter command" autofocus><input class="rm">
+  </form>
+
+  <div>
+      <input id="run2" onclick="kubecmd()" type="submit" name="" value="Run">
+  </div>
+
+</div>
+
+<div class="box2">
+  <pre>
+    <h3><u>Output:-</u></h3>
+    <div id="injected2"></div>
+  </pre>	
+</div>
+
+
+<div id="input-box3">
+  <div><h1 class="head3">Kubernetes Voice</h1></div>
+  <form>
+    <input class="txt" type="text3" id="txtBox3"  placeholder="Enter command" autofocus><input class="rm">
+  </form>
+
+  <div>
+	<i type="submit" id="icon" class="fa fa-microphone" onclick="voiceFun()" style="font-size:36px;color: teal;"></i>	
+  </div>
+</div>
+
+<div class="box3" id="bo">
+  <pre>
+    <h3><u>Output:-</u></h3>
+    <div id="injected3"></div>
+  </pre>	
+</div>
+
+
+
+
+</body>
+</html>
